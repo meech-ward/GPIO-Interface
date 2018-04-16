@@ -7,6 +7,7 @@ function pinForPinNumber(pinNumber) {
   let pin = pinCache[pinNumber];
   if (!pin) {
     pin = new GpioOutPin(pinNumber);
+    pinCache[pinNumber] = pin;
   }
   return pin;
 }
