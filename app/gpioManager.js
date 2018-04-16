@@ -14,8 +14,10 @@ function pinForPinNumber(pinNumber) {
 
 function updatePin(pinNumber, pinValue) {
   return new Promise((resolve, reject) => {
+    pinNumber = parseInt(pinNumber);
+    pinValue = parseFloat(pinValue);
     const pin = pinForPinNumber(pinNumber);
-    resolve(pin.setValue(parseInt(pinValue)));
+    resolve(pin.setValue(pinValue));
   });
 }
 exports.updatePin = updatePin;
