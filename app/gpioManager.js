@@ -15,7 +15,7 @@ function pinForPinNumber(pinNumber) {
 function updatePin(pinNumber, pinValue) {
   return new Promise((resolve, reject) => {
     const pin = pinForPinNumber(pinNumber);
-    resolve(pin.setValue(pinValue));
+    resolve(pin.setValue(parseInt(pinValue)));
   });
 }
 exports.updatePin = updatePin;
